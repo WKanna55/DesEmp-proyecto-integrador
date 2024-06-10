@@ -1,0 +1,6 @@
+venv/
+env/
+desempProjectFinal/db.sqlite3
+desempProjectFinal/brazalete_datos/__pycache__/
+desempProjectFinal/brazalete_datos/migrations/__pycache__/
+desempProjectFinal/desempProjectFinal/__pycache__/
