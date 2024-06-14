@@ -39,9 +39,9 @@
     <!-- Navigation END -->
 
     <!-- Contenido de la pagina -->
-    <div class="container-fluid mt-5 mb-5">
+    <section>
       {% block content %} {% endblock %}
-    </div>
+    </section>
     <!-- Contenido de la pagina END -->
 
     <!-- Footer -->
@@ -51,8 +51,8 @@
       </div>
       <!-- /.container -->
     </footer>
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap core JavaScript -->    
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
   </body>
 </html>
