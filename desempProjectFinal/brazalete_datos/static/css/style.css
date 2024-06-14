@@ -107,3 +107,26 @@ a:visited {
   max-width: 100px;
   margin-bottom: 1rem;
 }
+
+
+/* Sarai estilos */
+.jumbotron {
+  background-image: url("../images/pulsercar.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 5rem 1rem;
+}
+.main-content {
+  padding: 2rem;
+}
+.help-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.about-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
