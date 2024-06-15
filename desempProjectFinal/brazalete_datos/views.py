@@ -5,6 +5,12 @@ from datetime import datetime
 def index(request):
     return render(request, 'index.html')
 
+def about_us(request):
+    return render(request, 'about_us.html')
+
+def help(request):
+    return render(request, 'help.html')
+
 def fetch_closest_reminders(request):
     ref = db.reference('/closestReminders')
     data = ref.get()

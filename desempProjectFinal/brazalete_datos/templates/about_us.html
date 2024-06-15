@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block content %}
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Sobre Nosotros</h1>
+        <p class="lead">Conoce más sobre Pulsercar y cómo ayudamos a recordar la toma de medicamentos.</p>
+    </div>
+
+    <div class="container main-content">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="text-justify">
+                    Pulsercar es un proyecto innovador diseñado para ayudar a las personas a recordar cuándo deben tomar sus medicamentos. 
+                    Nuestra pulsera inteligente emite recordatorios mediante vibraciones, luces RGB y alarmas sonoras para asegurar que 
+                    nunca olvides tomar tus pastillas a tiempo. También cuenta con botones para confirmar la toma de medicamentos y para emergencias.
+                </p>
+                <p class="text-justify">
+                    Además, Pulsercar se conecta a una aplicación móvil que permite a los usuarios y sus cuidadores gestionar las alertas de medicamentos, 
+                    revisar el historial de tomas y recibir notificaciones en caso de emergencia. La app está disponible tanto para Android como para iOS.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'images/brazalete..jpg' %}" alt="Pulsercar Image" class="about-image">
+            </div>
+        </div>
+    </div>
+{% endblock %}

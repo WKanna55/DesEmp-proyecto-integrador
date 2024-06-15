@@ -13,3 +13,120 @@ body {
     padding-top: 56px;
   }
 }
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  min-height: 500px;
+}
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+  height: 500px; /* Altura fija del carrusel */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Oculta los extremos de la imagen que se desbordan */
+  position: relative; /* Necesario para el posicionamiento absoluto de la imagen */
+}
+
+.carousel-item img {
+  position: absolute; /* Posicionamiento absoluto dentro del contenedor */
+  top: 50%; /* Centrado vertical */
+  left: 50%; /* Centrado horizontal */
+  transform: translate(-50%, -50%); /* Ajusta el centrado */
+  width: 100%; /* Ajusta el ancho automáticamente */
+  height: 100%; /* Asegura que la imagen cubra el contenedor verticalmente */
+  object-fit: cover; /* Cubre el contenedor y recorta los bordes */
+}
+
+.img-carrusel {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+}
+
+.contenedor-z{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Ajusta el z-index para que este componente esté sobre el componente base */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+a:link,
+a:visited {
+  color: white;
+  text-decoration: none; /* Quita cualquier subrayado */
+}
+.btn-personal{
+  display: inline-block;
+  background-color: rgb(89, 112, 216);
+  padding: 6px 12px 6px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0px 2px 5px rgb(0, 0, 0); /* Define la sombra */
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 399px) {
+  .contenedor-z h3{
+    font-size: 20px;
+  }
+  .contenedor-z p{
+    font-size: 16px;
+  }
+  .btn-personal{
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+}
+
+.testimonials {
+  background-color: #fffbfb;
+  padding: 2rem 0;
+  text-align: center;
+}
+.testimonial-item {
+  padding: 1rem;
+}
+.testimonial-item img {
+  border-radius: 50%;
+  max-width: 100px;
+  margin-bottom: 1rem;
+}
+
+
+/* Sarai estilos */
+.jumbotron {
+  background-image: url("../images/pulsercar.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 5rem 1rem;
+}
+.main-content {
+  padding: 2rem;
+}
+.help-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.about-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}

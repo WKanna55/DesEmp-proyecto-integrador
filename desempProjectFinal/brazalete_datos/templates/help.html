@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block content %}
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Ayuda</h1>
+        <p class="lead">Encuentra respuestas a las preguntas más frecuentes sobre Pulsercar.</p>
+    </div>
+    <div class="container main-content">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="text-justify">
+                    Si necesitas ayuda con tu Pulsercar, aquí encontrarás las respuestas a las preguntas más frecuentes. 
+                    Si tienes algún problema o necesitas asistencia adicional, no dudes en contactarnos.
+                </p>
+                <div class="accordion" id="faqAccordion">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    ¿Cómo configuro mi Pulsercar?
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                            <div class="card-body">
+                                Para configurar tu Pulsercar, sigue los siguientes pasos: [Instrucciones detalladas]
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    ¿Qué hacer si mi Pulsercar no responde?
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                            <div class="card-body">
+                                Si tu Pulsercar no responde, intenta las siguientes soluciones: [Soluciones detalladas]
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Contacta con el soporte técnico
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
+                            <div class="card-body">
+                                Para contactar con el soporte técnico, envía un correo a <a href="mailto:soporte@pulsercar.com">soporte@pulsercar.com</a>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'images/brazalet.jpg' %}" alt="Help Image" class="help-image">
+            </div>
+        </div>
+    </div>
+{% endblock %}
