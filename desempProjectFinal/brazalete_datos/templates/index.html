@@ -1,60 +1,58 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Shop Homepage</title>
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
-  </head>
-
-  <body>
-
+</head>
+<body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">PulseCare</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Inicio
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Tabla</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Acerca de</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Ayuda</a>
-            </li>
-          </ul>
+        <div class="container">
+            <a class="navbar-brand" href="#">PulseCare</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Inicio
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'brazalete_datos:fetch_closest_reminders' %}">Tabla</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Ayuda</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
     </nav>
     <!-- Navigation END -->
 
     <!-- Contenido de la pagina -->
     <div class="container mt-5 mb-5">
-      {% block content %} {% endblock %}
+        {% block content %} {% endblock %}
     </div>
     <!-- Contenido de la pagina END -->
 
     <!-- Footer -->
     <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; PulseCare 2024</p>
-      </div>
-      <!-- /.container -->
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; PulseCare 2024</p>
+        </div>
+        <!-- /.container -->
     </footer>
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  </body>
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+</body>
 </html>

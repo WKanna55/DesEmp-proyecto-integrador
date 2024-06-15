@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recordatorio</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Convergence&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #EAEBE6; /* Color de fondo más claro */
+            font-family: 'Convergence', sans-serif; /* Aplicar la fuente Convergence */
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .card {
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: #C3D6DD; /* Fondo de las tarjetas */
+        }
+        .card-title {
+            font-size: 1.75rem;
+            margin-bottom: 20px;
+            color: #263341; /* Título de la tarjeta */
+        }
+        .card-text {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #263341; /* Texto de la tarjeta */
+        }
+        .card-header {
+            background-color: #5E96A5; /* Fondo del encabezado de la tarjeta */
+            color: white;
+            font-size: 1.25rem;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+        .card-footer {
+            background-color: #A7D8DD; /* Fondo del pie de la tarjeta */
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            text-align: center;
+            color: #263341; /* Texto del pie de la tarjeta */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Recordatorios más cercanos</h1>
+        <div class="card">
+            <div class="card-header">
+                Detalles del recordatorio
+            </div>
+            <div class="card-body">
+                {% if data %}
+                    <p class="card-text"><strong>ID:</strong> {{ data.id }}</p>
+                    <p class="card-text"><strong>Medicine Name:</strong> {{ data.medicineName }}</p>
+                    <p class="card-text"><strong>Reminder Time:</strong> {{ data.reminderTime }}</p>
+                    <p class="card-text"><strong>State:</strong> {{ data.state }}</p>
+                {% else %}
+                    <p class="card-text">No data available</p>
+                {% endif %}
+            </div>
+            <div class="card-footer">
+                &copy; PulseCare 2024
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
